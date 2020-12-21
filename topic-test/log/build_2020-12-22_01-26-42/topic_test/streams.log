@@ -1,0 +1,32 @@
+[0.043s] Invoking command in '/home/ros2/ROS2-benchmark/topic-test/build/topic_test': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ros2/ROS2-benchmark/topic-test/build/topic_test -- -j1 -l1
+[0.200s] [35m[1mScanning dependencies of target sub[0m
+[0.326s] [ 25%] [32mBuilding CXX object CMakeFiles/sub.dir/src/subscriber.cpp.o[0m
+[11.530s] [ 50%] [32m[1mLinking CXX executable sub[0m
+[12.252s] [ 50%] Built target sub
+[12.286s] [35m[1mScanning dependencies of target pub[0m
+[12.405s] [ 75%] [32mBuilding CXX object CMakeFiles/pub.dir/src/publisher.cpp.o[0m
+[19.430s] [100%] [32m[1mLinking CXX executable pub[0m
+[19.962s] [100%] Built target pub
+[19.996s] Invoked command in '/home/ros2/ROS2-benchmark/topic-test/build/topic_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ros2/ROS2-benchmark/topic-test/build/topic_test -- -j1 -l1
+[20.108s] Invoking command in '/home/ros2/ROS2-benchmark/topic-test/build/topic_test': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ros2/ROS2-benchmark/topic-test/build/topic_test
+[20.130s] -- Install configuration: ""
+[20.132s] -- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/lib/topic_test/pub
+[20.135s] -- Set runtime path of "/home/ros2/ROS2-benchmark/topic-test/install/topic_test/lib/topic_test/pub" to ""
+[20.137s] -- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/lib/topic_test/sub
+[20.144s] -- Set runtime path of "/home/ros2/ROS2-benchmark/topic-test/install/topic_test/lib/topic_test/sub" to ""
+[20.145s] -- Up-to-date: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/ament_index/resource_index/package_run_dependencies/topic_test
+[20.145s] -- Up-to-date: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/ament_index/resource_index/parent_prefix_path/topic_test
+[20.150s] -- Up-to-date: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/environment/ament_prefix_path.sh
+[20.150s] -- Up-to-date: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/environment/ament_prefix_path.dsv
+[20.151s] -- Up-to-date: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/environment/path.sh
+[20.151s] -- Up-to-date: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/environment/path.dsv
+[20.151s] -- Up-to-date: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/local_setup.bash
+[20.151s] -- Up-to-date: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/local_setup.sh
+[20.152s] -- Up-to-date: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/local_setup.zsh
+[20.152s] -- Up-to-date: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/local_setup.dsv
+[20.153s] -- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/package.dsv
+[20.153s] -- Up-to-date: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/ament_index/resource_index/packages/topic_test
+[20.154s] -- Up-to-date: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/cmake/topic_testConfig.cmake
+[20.155s] -- Up-to-date: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/cmake/topic_testConfig-version.cmake
+[20.156s] -- Up-to-date: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/package.xml
+[20.162s] Invoked command in '/home/ros2/ROS2-benchmark/topic-test/build/topic_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ros2/ROS2-benchmark/topic-test/build/topic_test

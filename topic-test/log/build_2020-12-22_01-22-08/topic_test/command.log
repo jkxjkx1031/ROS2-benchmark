@@ -1,4 +1,6 @@
 Invoking command in '/home/ros2/ROS2-benchmark/topic-test/build/topic_test': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/ros2/ROS2-benchmark/topic-test/topic_test -DCMAKE_INSTALL_PREFIX=/home/ros2/ROS2-benchmark/topic-test/install/topic_test
 Invoked command in '/home/ros2/ROS2-benchmark/topic-test/build/topic_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/ros2/ROS2-benchmark/topic-test/topic_test -DCMAKE_INSTALL_PREFIX=/home/ros2/ROS2-benchmark/topic-test/install/topic_test
 Invoking command in '/home/ros2/ROS2-benchmark/topic-test/build/topic_test': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ros2/ROS2-benchmark/topic-test/build/topic_test -- -j1 -l1
-Invoked command in '/home/ros2/ROS2-benchmark/topic-test/build/topic_test' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ros2/ROS2-benchmark/topic-test/build/topic_test -- -j1 -l1
+Invoked command in '/home/ros2/ROS2-benchmark/topic-test/build/topic_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ros2/ROS2-benchmark/topic-test/build/topic_test -- -j1 -l1
+Invoking command in '/home/ros2/ROS2-benchmark/topic-test/build/topic_test': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ros2/ROS2-benchmark/topic-test/build/topic_test
+Invoked command in '/home/ros2/ROS2-benchmark/topic-test/build/topic_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ros2/ROS2-benchmark/topic-test/build/topic_test

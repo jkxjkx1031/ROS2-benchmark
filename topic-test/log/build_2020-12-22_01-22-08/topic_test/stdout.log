@@ -46,5 +46,31 @@
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/ros2/ROS2-benchmark/topic-test/build/topic_test
+[35m[1mScanning dependencies of target sub[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/sub.dir/src/subscriber.cpp.o[0m
+[ 50%] [32m[1mLinking CXX executable sub[0m
+[ 50%] Built target sub
 [35m[1mScanning dependencies of target pub[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/pub.dir/src/publisher.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/pub.dir/src/publisher.cpp.o[0m
+[100%] [32m[1mLinking CXX executable pub[0m
+[100%] Built target pub
+-- Install configuration: ""
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/lib/topic_test/pub
+-- Set runtime path of "/home/ros2/ROS2-benchmark/topic-test/install/topic_test/lib/topic_test/pub" to ""
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/lib/topic_test/sub
+-- Set runtime path of "/home/ros2/ROS2-benchmark/topic-test/install/topic_test/lib/topic_test/sub" to ""
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/ament_index/resource_index/package_run_dependencies/topic_test
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/ament_index/resource_index/parent_prefix_path/topic_test
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/environment/ament_prefix_path.sh
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/environment/ament_prefix_path.dsv
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/environment/path.sh
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/environment/path.dsv
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/local_setup.bash
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/local_setup.sh
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/local_setup.zsh
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/local_setup.dsv
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/package.dsv
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/ament_index/resource_index/packages/topic_test
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/cmake/topic_testConfig.cmake
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/cmake/topic_testConfig-version.cmake
+-- Installing: /home/ros2/ROS2-benchmark/topic-test/install/topic_test/share/topic_test/package.xml
