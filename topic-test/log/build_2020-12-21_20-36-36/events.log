@@ -1,0 +1,190 @@
+[0.000000] (-) TimerEvent: {}
+[0.001070] (topic_test) JobQueued: {'identifier': 'topic_test', 'dependencies': OrderedDict()}
+[0.007217] (topic_test) JobStarted: {'identifier': 'topic_test'}
+[0.095851] (-) TimerEvent: {}
+[0.137851] (topic_test) JobProgress: {'identifier': 'topic_test', 'progress': 'cmake'}
+[0.143739] (topic_test) JobProgress: {'identifier': 'topic_test', 'progress': 'build'}
+[0.145464] (topic_test) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ros2/ROS2-benchmark/topic-test/build/topic_test', '--', '-j1', '-l1'], 'cwd': '/home/ros2/ROS2-benchmark/topic-test/build/topic_test', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'ros2'), ('SSH_AGENT_PID', '971'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/ros2'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/ros2/ROS2-benchmark'), ('TERM_PROGRAM_VERSION', '1.52.1'), ('DESKTOP_SESSION', 'ubuntu'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', 'true'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '754'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=326b4cdf41f5e182826362045fe05dae'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ros2'), ('JOURNAL_STREAM', '9:25693'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ros2-VirtualBox:@/tmp/.ICE-unix/1009,unix/ros2-VirtualBox:/tmp/.ICE-unix/1009'), ('INVOCATION_ID', 'e22674b1bd394325a945f0445b93d3f9'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9147e09c_f1c0_4329_a0f9_1d99392db791'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_SG.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f77559a045.sock'), ('GNOME_TERMINAL_SERVICE', ':1.136'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros2/ROS2-benchmark/topic-test/build/topic_test'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=326b4cdf41f5e182826362045fe05dae'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.215041] (-) TimerEvent: {}
+[0.315428] (-) TimerEvent: {}
+[0.416506] (-) TimerEvent: {}
+[0.516843] (-) TimerEvent: {}
+[0.617478] (-) TimerEvent: {}
+[0.717976] (-) TimerEvent: {}
+[0.818283] (-) TimerEvent: {}
+[0.918723] (-) TimerEvent: {}
+[1.019412] (-) TimerEvent: {}
+[1.120938] (-) TimerEvent: {}
+[1.221776] (-) TimerEvent: {}
+[1.322197] (-) TimerEvent: {}
+[1.422603] (-) TimerEvent: {}
+[1.524101] (-) TimerEvent: {}
+[1.624569] (-) TimerEvent: {}
+[1.725025] (-) TimerEvent: {}
+[1.825406] (-) TimerEvent: {}
+[1.925959] (-) TimerEvent: {}
+[2.028477] (-) TimerEvent: {}
+[2.129321] (-) TimerEvent: {}
+[2.161453] (topic_test) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pub\x1b[0m\n'}
+[2.234512] (-) TimerEvent: {}
+[2.292969] (topic_test) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/pub.dir/src/publisher.cpp.o\x1b[0m\n'}
+[2.334948] (-) TimerEvent: {}
+[2.435418] (-) TimerEvent: {}
+[2.535846] (-) TimerEvent: {}
+[2.636557] (-) TimerEvent: {}
+[2.737045] (-) TimerEvent: {}
+[2.837426] (-) TimerEvent: {}
+[2.938156] (-) TimerEvent: {}
+[3.038427] (-) TimerEvent: {}
+[3.139264] (-) TimerEvent: {}
+[3.239828] (-) TimerEvent: {}
+[3.341658] (-) TimerEvent: {}
+[3.443378] (-) TimerEvent: {}
+[3.543901] (-) TimerEvent: {}
+[3.644333] (-) TimerEvent: {}
+[3.747382] (-) TimerEvent: {}
+[3.849819] (-) TimerEvent: {}
+[3.951455] (-) TimerEvent: {}
+[4.053125] (-) TimerEvent: {}
+[4.153806] (-) TimerEvent: {}
+[4.254278] (-) TimerEvent: {}
+[4.356449] (-) TimerEvent: {}
+[4.458117] (-) TimerEvent: {}
+[4.559991] (-) TimerEvent: {}
+[4.662043] (-) TimerEvent: {}
+[4.763919] (-) TimerEvent: {}
+[4.867265] (-) TimerEvent: {}
+[4.969184] (-) TimerEvent: {}
+[5.073635] (-) TimerEvent: {}
+[5.175362] (-) TimerEvent: {}
+[5.277145] (-) TimerEvent: {}
+[5.379092] (-) TimerEvent: {}
+[5.481139] (-) TimerEvent: {}
+[5.583619] (-) TimerEvent: {}
+[5.685640] (-) TimerEvent: {}
+[5.787225] (-) TimerEvent: {}
+[5.889083] (-) TimerEvent: {}
+[5.991226] (-) TimerEvent: {}
+[6.093382] (-) TimerEvent: {}
+[6.198519] (-) TimerEvent: {}
+[6.299901] (-) TimerEvent: {}
+[6.401342] (-) TimerEvent: {}
+[6.503348] (-) TimerEvent: {}
+[6.605849] (-) TimerEvent: {}
+[6.708342] (-) TimerEvent: {}
+[6.811182] (-) TimerEvent: {}
+[6.912812] (-) TimerEvent: {}
+[7.016790] (-) TimerEvent: {}
+[7.121798] (-) TimerEvent: {}
+[7.227071] (-) TimerEvent: {}
+[7.328696] (-) TimerEvent: {}
+[7.430611] (-) TimerEvent: {}
+[7.533162] (-) TimerEvent: {}
+[7.553884] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[7.558492] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:17:90:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kto_string(const char [33])\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.558720] (topic_test) StderrLine: {'line': b'   17 |             500ms, [this]{pub_->publish(std::to_string("[this is a string of length 32]#"\x1b[01;31m\x1b[K)\x1b[m\x1b[K);}\n'}
+[7.558906] (topic_test) StderrLine: {'line': b'      |                                                                                          \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.561659] (topic_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[7.561877] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:2\x1b[m\x1b[K:\n'}
+[7.562063] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6546:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(int)\x1b[m\x1b[K\xe2\x80\x99 <near match>\n'}
+[7.562247] (topic_test) StderrLine: {'line': b' 6546 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(int __val)\n'}
+[7.562544] (topic_test) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[7.562745] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6546:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[7.564290] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:17:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[7.564529] (topic_test) StderrLine: {'line': b'   17 |             500ms, [this]{pub_->publish(std::to_string(\x1b[01;31m\x1b[K"[this is a string of length 32]#"\x1b[m\x1b[K));}\n'}
+[7.564780] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.564955] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[7.565127] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[7.566363] (topic_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[7.569813] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:2\x1b[m\x1b[K:\n'}
+[7.570016] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6551:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(unsigned int)\x1b[m\x1b[K\xe2\x80\x99 <near match>\n'}
+[7.570224] (topic_test) StderrLine: {'line': b' 6551 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(unsigned __val)\n'}
+[7.570393] (topic_test) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[7.570582] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6551:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[7.570805] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:17:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kunsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[7.571216] (topic_test) StderrLine: {'line': b'   17 |             500ms, [this]{pub_->publish(std::to_string(\x1b[01;31m\x1b[K"[this is a string of length 32]#"\x1b[m\x1b[K));}\n'}
+[7.571411] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.571552] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[7.571687] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[7.581250] (topic_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[7.582103] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:2\x1b[m\x1b[K:\n'}
+[7.582258] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6557:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(long int)\x1b[m\x1b[K\xe2\x80\x99 <near match>\n'}
+[7.582381] (topic_test) StderrLine: {'line': b' 6557 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(long __val)\n'}
+[7.582498] (topic_test) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[7.582613] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6557:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[7.582743] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:17:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Klong int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[7.582910] (topic_test) StderrLine: {'line': b'   17 |             500ms, [this]{pub_->publish(std::to_string(\x1b[01;31m\x1b[K"[this is a string of length 32]#"\x1b[m\x1b[K));}\n'}
+[7.583026] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.583141] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[7.583262] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[7.583434] (topic_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[7.583550] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:2\x1b[m\x1b[K:\n'}
+[7.583664] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6562:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(long unsigned int)\x1b[m\x1b[K\xe2\x80\x99 <near match>\n'}
+[7.583814] (topic_test) StderrLine: {'line': b' 6562 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(unsigned long __val)\n'}
+[7.583931] (topic_test) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[7.584083] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6562:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[7.584204] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:17:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[7.584329] (topic_test) StderrLine: {'line': b'   17 |             500ms, [this]{pub_->publish(std::to_string(\x1b[01;31m\x1b[K"[this is a string of length 32]#"\x1b[m\x1b[K));}\n'}
+[7.584453] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.584574] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[7.584904] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[7.585029] (topic_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[7.585150] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:2\x1b[m\x1b[K:\n'}
+[7.585284] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6568:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(long long int)\x1b[m\x1b[K\xe2\x80\x99 <near match>\n'}
+[7.585398] (topic_test) StderrLine: {'line': b' 6568 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(long long __val)\n'}
+[7.585511] (topic_test) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[7.585624] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6568:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[7.598197] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:17:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Klong long int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[7.598358] (topic_test) StderrLine: {'line': b'   17 |             500ms, [this]{pub_->publish(std::to_string(\x1b[01;31m\x1b[K"[this is a string of length 32]#"\x1b[m\x1b[K));}\n'}
+[7.598644] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.598770] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[7.598892] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[7.599650] (topic_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[7.599790] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:2\x1b[m\x1b[K:\n'}
+[7.599917] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6574:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::string std::__cxx11::to_string(long long unsigned int)\x1b[m\x1b[K\xe2\x80\x99 <near match>\n'}
+[7.600050] (topic_test) StderrLine: {'line': b' 6574 |   \x1b[01;36m\x1b[Kto_string\x1b[m\x1b[K(unsigned long long __val)\n'}
+[7.600173] (topic_test) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[7.600294] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6574:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[7.600456] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:17:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Klong long unsigned int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[7.600594] (topic_test) StderrLine: {'line': b'   17 |             500ms, [this]{pub_->publish(std::to_string(\x1b[01;31m\x1b[K"[this is a string of length 32]#"\x1b[m\x1b[K));}\n'}
+[7.600717] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.600839] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[7.600965] (topic_test) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[7.633252] (-) TimerEvent: {}
+[7.736080] (-) TimerEvent: {}
+[7.837605] (-) TimerEvent: {}
+[7.940160] (-) TimerEvent: {}
+[8.041640] (-) TimerEvent: {}
+[8.143680] (-) TimerEvent: {}
+[8.246086] (-) TimerEvent: {}
+[8.348510] (-) TimerEvent: {}
+[8.454083] (-) TimerEvent: {}
+[8.556946] (-) TimerEvent: {}
+[8.658509] (-) TimerEvent: {}
+[8.759997] (-) TimerEvent: {}
+[8.862013] (-) TimerEvent: {}
+[8.964235] (-) TimerEvent: {}
+[9.066524] (-) TimerEvent: {}
+[9.166840] (-) TimerEvent: {}
+[9.268991] (-) TimerEvent: {}
+[9.370986] (-) TimerEvent: {}
+[9.473448] (-) TimerEvent: {}
+[9.575455] (-) TimerEvent: {}
+[9.677525] (-) TimerEvent: {}
+[9.779842] (-) TimerEvent: {}
+[9.880535] (-) TimerEvent: {}
+[9.915254] (topic_test) StderrLine: {'line': b'make[2]: *** [CMakeFiles/pub.dir/build.make:63: CMakeFiles/pub.dir/src/publisher.cpp.o] Error 1\n'}
+[9.935074] (topic_test) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/pub.dir/all] Error 2\n'}
+[9.935304] (topic_test) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[9.981131] (-) TimerEvent: {}
+[10.000381] (topic_test) CommandEnded: {'returncode': 2}
+[10.081318] (-) TimerEvent: {}
+[10.182702] (-) TimerEvent: {}
+[10.283452] (-) TimerEvent: {}
+[10.383989] (-) TimerEvent: {}
+[10.484458] (-) TimerEvent: {}
+[10.586517] (-) TimerEvent: {}
+[10.688253] (-) TimerEvent: {}
+[10.784764] (topic_test) JobEnded: {'identifier': 'topic_test', 'rc': 2}
+[10.789326] (-) TimerEvent: {}
+[10.789784] (-) EventReactorShutdown: {}

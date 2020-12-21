@@ -1,0 +1,451 @@
+[0.000000] (-) TimerEvent: {}
+[0.002062] (topic_test) JobQueued: {'identifier': 'topic_test', 'dependencies': OrderedDict()}
+[0.002133] (topic_test) JobStarted: {'identifier': 'topic_test'}
+[0.098864] (-) TimerEvent: {}
+[0.118994] (topic_test) JobProgress: {'identifier': 'topic_test', 'progress': 'cmake'}
+[0.119347] (topic_test) Command: {'cmd': ['/usr/bin/cmake', '/home/ros2/ROS2-benchmark/topic-test/topic_test', '-DCMAKE_INSTALL_PREFIX=/home/ros2/ROS2-benchmark/topic-test/install/topic_test'], 'cwd': '/home/ros2/ROS2-benchmark/topic-test/build/topic_test', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'ros2'), ('SSH_AGENT_PID', '971'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/ros2'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/ros2/ROS2-benchmark'), ('TERM_PROGRAM_VERSION', '1.52.1'), ('DESKTOP_SESSION', 'ubuntu'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', 'true'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '754'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=326b4cdf41f5e182826362045fe05dae'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ros2'), ('JOURNAL_STREAM', '9:25693'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ros2-VirtualBox:@/tmp/.ICE-unix/1009,unix/ros2-VirtualBox:/tmp/.ICE-unix/1009'), ('INVOCATION_ID', 'e22674b1bd394325a945f0445b93d3f9'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9147e09c_f1c0_4329_a0f9_1d99392db791'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_SG.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f77559a045.sock'), ('GNOME_TERMINAL_SERVICE', ':1.136'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros2/ROS2-benchmark/topic-test/build/topic_test'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=326b4cdf41f5e182826362045fe05dae'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.220725] (-) TimerEvent: {}
+[0.321219] (-) TimerEvent: {}
+[0.421610] (-) TimerEvent: {}
+[0.522119] (-) TimerEvent: {}
+[0.622905] (-) TimerEvent: {}
+[0.723236] (-) TimerEvent: {}
+[0.824081] (-) TimerEvent: {}
+[0.924406] (-) TimerEvent: {}
+[1.024834] (-) TimerEvent: {}
+[1.125818] (-) TimerEvent: {}
+[1.226104] (-) TimerEvent: {}
+[1.326419] (-) TimerEvent: {}
+[1.426799] (-) TimerEvent: {}
+[1.527532] (-) TimerEvent: {}
+[1.628021] (-) TimerEvent: {}
+[1.728552] (-) TimerEvent: {}
+[1.828946] (-) TimerEvent: {}
+[1.929334] (-) TimerEvent: {}
+[2.029776] (-) TimerEvent: {}
+[2.130414] (-) TimerEvent: {}
+[2.230755] (-) TimerEvent: {}
+[2.331247] (-) TimerEvent: {}
+[2.431865] (-) TimerEvent: {}
+[2.533064] (-) TimerEvent: {}
+[2.633536] (-) TimerEvent: {}
+[2.733833] (-) TimerEvent: {}
+[2.834087] (-) TimerEvent: {}
+[2.934401] (-) TimerEvent: {}
+[3.034720] (-) TimerEvent: {}
+[3.134984] (-) TimerEvent: {}
+[3.235298] (-) TimerEvent: {}
+[3.335907] (-) TimerEvent: {}
+[3.436240] (-) TimerEvent: {}
+[3.536598] (-) TimerEvent: {}
+[3.637700] (-) TimerEvent: {}
+[3.738258] (-) TimerEvent: {}
+[3.838528] (-) TimerEvent: {}
+[3.938849] (-) TimerEvent: {}
+[4.039253] (-) TimerEvent: {}
+[4.139545] (-) TimerEvent: {}
+[4.239902] (-) TimerEvent: {}
+[4.340336] (-) TimerEvent: {}
+[4.442581] (-) TimerEvent: {}
+[4.542913] (-) TimerEvent: {}
+[4.644851] (-) TimerEvent: {}
+[4.747879] (-) TimerEvent: {}
+[4.848317] (-) TimerEvent: {}
+[4.948921] (-) TimerEvent: {}
+[5.049392] (-) TimerEvent: {}
+[5.149791] (-) TimerEvent: {}
+[5.230871] (topic_test) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.3.0\n'}
+[5.249889] (-) TimerEvent: {}
+[5.353104] (-) TimerEvent: {}
+[5.455865] (-) TimerEvent: {}
+[5.556459] (-) TimerEvent: {}
+[5.656858] (-) TimerEvent: {}
+[5.757223] (-) TimerEvent: {}
+[5.857590] (-) TimerEvent: {}
+[5.957945] (-) TimerEvent: {}
+[6.058280] (-) TimerEvent: {}
+[6.158954] (-) TimerEvent: {}
+[6.261039] (-) TimerEvent: {}
+[6.361575] (-) TimerEvent: {}
+[6.462538] (-) TimerEvent: {}
+[6.566289] (-) TimerEvent: {}
+[6.667474] (-) TimerEvent: {}
+[6.732608] (topic_test) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.3.0\n'}
+[6.768428] (-) TimerEvent: {}
+[6.868742] (-) TimerEvent: {}
+[6.961530] (topic_test) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[6.969384] (-) TimerEvent: {}
+[7.070129] (-) TimerEvent: {}
+[7.171706] (-) TimerEvent: {}
+[7.272760] (-) TimerEvent: {}
+[7.377399] (-) TimerEvent: {}
+[7.420667] (topic_test) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[7.446313] (topic_test) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[7.477703] (-) TimerEvent: {}
+[7.578055] (-) TimerEvent: {}
+[7.680608] (-) TimerEvent: {}
+[7.693782] (topic_test) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[7.775262] (topic_test) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[7.781009] (-) TimerEvent: {}
+[7.787690] (topic_test) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[7.841073] (topic_test) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[7.884894] (-) TimerEvent: {}
+[7.986515] (-) TimerEvent: {}
+[8.089648] (-) TimerEvent: {}
+[8.125792] (topic_test) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[8.135286] (topic_test) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[8.191324] (-) TimerEvent: {}
+[8.298745] (-) TimerEvent: {}
+[8.402186] (-) TimerEvent: {}
+[8.489280] (topic_test) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[8.502331] (-) TimerEvent: {}
+[8.562372] (topic_test) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[8.567859] (topic_test) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[8.602799] (-) TimerEvent: {}
+[8.703564] (-) TimerEvent: {}
+[8.804907] (-) TimerEvent: {}
+[8.905230] (-) TimerEvent: {}
+[8.921008] (topic_test) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[9.005328] (-) TimerEvent: {}
+[9.105652] (-) TimerEvent: {}
+[9.207513] (-) TimerEvent: {}
+[9.307890] (-) TimerEvent: {}
+[9.408205] (-) TimerEvent: {}
+[9.509302] (-) TimerEvent: {}
+[9.516230] (topic_test) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3") \n'}
+[9.516767] (topic_test) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[9.609582] (-) TimerEvent: {}
+[9.710005] (-) TimerEvent: {}
+[9.813311] (-) TimerEvent: {}
+[9.913940] (-) TimerEvent: {}
+[10.015149] (-) TimerEvent: {}
+[10.115501] (-) TimerEvent: {}
+[10.215831] (-) TimerEvent: {}
+[10.316398] (-) TimerEvent: {}
+[10.417814] (-) TimerEvent: {}
+[10.519121] (-) TimerEvent: {}
+[10.619440] (-) TimerEvent: {}
+[10.728949] (-) TimerEvent: {}
+[10.829439] (-) TimerEvent: {}
+[10.930647] (-) TimerEvent: {}
+[11.031601] (-) TimerEvent: {}
+[11.134049] (-) TimerEvent: {}
+[11.236597] (-) TimerEvent: {}
+[11.339047] (-) TimerEvent: {}
+[11.441569] (-) TimerEvent: {}
+[11.544432] (-) TimerEvent: {}
+[11.645027] (-) TimerEvent: {}
+[11.746833] (-) TimerEvent: {}
+[11.847667] (-) TimerEvent: {}
+[11.923355] (topic_test) StdoutLine: {'line': b'-- Found rclcpp: 2.3.0 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[11.947837] (-) TimerEvent: {}
+[12.048714] (-) TimerEvent: {}
+[12.149230] (-) TimerEvent: {}
+[12.251629] (-) TimerEvent: {}
+[12.352165] (-) TimerEvent: {}
+[12.454468] (-) TimerEvent: {}
+[12.554886] (-) TimerEvent: {}
+[12.599294] (topic_test) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[12.655377] (-) TimerEvent: {}
+[12.674774] (topic_test) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[12.755472] (-) TimerEvent: {}
+[12.857132] (-) TimerEvent: {}
+[12.959849] (-) TimerEvent: {}
+[13.061411] (-) TimerEvent: {}
+[13.161745] (-) TimerEvent: {}
+[13.262152] (-) TimerEvent: {}
+[13.318563] (topic_test) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[13.363072] (-) TimerEvent: {}
+[13.419003] (topic_test) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[13.463506] (-) TimerEvent: {}
+[13.565182] (-) TimerEvent: {}
+[13.667112] (-) TimerEvent: {}
+[13.770856] (-) TimerEvent: {}
+[13.804903] (topic_test) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[13.871548] (-) TimerEvent: {}
+[13.973316] (-) TimerEvent: {}
+[14.074792] (-) TimerEvent: {}
+[14.099350] (topic_test) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.2 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[14.114567] (topic_test) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[14.147136] (topic_test) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[14.175098] (-) TimerEvent: {}
+[14.275709] (-) TimerEvent: {}
+[14.376421] (-) TimerEvent: {}
+[14.477056] (-) TimerEvent: {}
+[14.543322] (topic_test) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[14.544080] (topic_test) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[14.577185] (-) TimerEvent: {}
+[14.679619] (-) TimerEvent: {}
+[14.780597] (-) TimerEvent: {}
+[14.841589] (topic_test) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[14.844132] (topic_test) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[14.883533] (-) TimerEvent: {}
+[14.985103] (-) TimerEvent: {}
+[15.086097] (-) TimerEvent: {}
+[15.105809] (topic_test) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[15.106389] (topic_test) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[15.186254] (-) TimerEvent: {}
+[15.292016] (-) TimerEvent: {}
+[15.349746] (topic_test) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[15.354859] (topic_test) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[15.392588] (-) TimerEvent: {}
+[15.493151] (-) TimerEvent: {}
+[15.593589] (-) TimerEvent: {}
+[15.694158] (-) TimerEvent: {}
+[15.794709] (-) TimerEvent: {}
+[15.895328] (-) TimerEvent: {}
+[15.996138] (-) TimerEvent: {}
+[16.098136] (-) TimerEvent: {}
+[16.200969] (-) TimerEvent: {}
+[16.302944] (-) TimerEvent: {}
+[16.404955] (-) TimerEvent: {}
+[16.506501] (-) TimerEvent: {}
+[16.608687] (-) TimerEvent: {}
+[16.711006] (-) TimerEvent: {}
+[16.742299] (topic_test) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[16.811168] (-) TimerEvent: {}
+[16.914871] (-) TimerEvent: {}
+[17.017252] (-) TimerEvent: {}
+[17.120226] (-) TimerEvent: {}
+[17.220851] (-) TimerEvent: {}
+[17.323314] (-) TimerEvent: {}
+[17.338960] (topic_test) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[17.351159] (topic_test) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[17.352043] (topic_test) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[17.352289] (topic_test) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[17.385044] (topic_test) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[17.385281] (topic_test) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[17.397198] (topic_test) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[17.399877] (topic_test) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[17.400187] (topic_test) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[17.418260] (topic_test) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[17.423477] (-) TimerEvent: {}
+[17.494941] (topic_test) StdoutLine: {'line': b'-- Configuring done\n'}
+[17.537839] (-) TimerEvent: {}
+[17.549795] (topic_test) StdoutLine: {'line': b'-- Generating done\n'}
+[17.563385] (topic_test) StdoutLine: {'line': b'-- Build files have been written to: /home/ros2/ROS2-benchmark/topic-test/build/topic_test\n'}
+[17.613995] (topic_test) CommandEnded: {'returncode': 0}
+[17.614852] (topic_test) JobProgress: {'identifier': 'topic_test', 'progress': 'build'}
+[17.614901] (topic_test) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ros2/ROS2-benchmark/topic-test/build/topic_test', '--', '-j1', '-l1'], 'cwd': '/home/ros2/ROS2-benchmark/topic-test/build/topic_test', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'ros2'), ('SSH_AGENT_PID', '971'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/ros2'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/ros2/ROS2-benchmark'), ('TERM_PROGRAM_VERSION', '1.52.1'), ('DESKTOP_SESSION', 'ubuntu'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', 'true'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '754'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=326b4cdf41f5e182826362045fe05dae'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ros2'), ('JOURNAL_STREAM', '9:25693'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ros2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ros2-VirtualBox:@/tmp/.ICE-unix/1009,unix/ros2-VirtualBox:/tmp/.ICE-unix/1009'), ('INVOCATION_ID', 'e22674b1bd394325a945f0445b93d3f9'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9147e09c_f1c0_4329_a0f9_1d99392db791'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_SG.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f77559a045.sock'), ('GNOME_TERMINAL_SERVICE', ':1.136'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ros2/ROS2-benchmark/topic-test/build/topic_test'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=326b4cdf41f5e182826362045fe05dae'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[17.643582] (-) TimerEvent: {}
+[17.745007] (-) TimerEvent: {}
+[17.758832] (topic_test) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pub\x1b[0m\n'}
+[17.845174] (-) TimerEvent: {}
+[17.945628] (-) TimerEvent: {}
+[18.046239] (-) TimerEvent: {}
+[18.146980] (-) TimerEvent: {}
+[18.247294] (-) TimerEvent: {}
+[18.347965] (-) TimerEvent: {}
+[18.448696] (-) TimerEvent: {}
+[18.549069] (-) TimerEvent: {}
+[18.649394] (-) TimerEvent: {}
+[18.749914] (-) TimerEvent: {}
+[18.850247] (-) TimerEvent: {}
+[18.950807] (-) TimerEvent: {}
+[19.051339] (-) TimerEvent: {}
+[19.151931] (-) TimerEvent: {}
+[19.252384] (-) TimerEvent: {}
+[19.353321] (-) TimerEvent: {}
+[19.453813] (-) TimerEvent: {}
+[19.554203] (-) TimerEvent: {}
+[19.654887] (-) TimerEvent: {}
+[19.755153] (-) TimerEvent: {}
+[19.860953] (-) TimerEvent: {}
+[19.958880] (topic_test) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/pub.dir/src/publisher.cpp.o\x1b[0m\n'}
+[19.965288] (-) TimerEvent: {}
+[20.065665] (-) TimerEvent: {}
+[20.171691] (-) TimerEvent: {}
+[20.272245] (-) TimerEvent: {}
+[20.372803] (-) TimerEvent: {}
+[20.473407] (-) TimerEvent: {}
+[20.573958] (-) TimerEvent: {}
+[20.674415] (-) TimerEvent: {}
+[20.774904] (-) TimerEvent: {}
+[20.875753] (-) TimerEvent: {}
+[20.976073] (-) TimerEvent: {}
+[21.078098] (-) TimerEvent: {}
+[21.178744] (-) TimerEvent: {}
+[21.281114] (-) TimerEvent: {}
+[21.381920] (-) TimerEvent: {}
+[21.482322] (-) TimerEvent: {}
+[21.583344] (-) TimerEvent: {}
+[21.683732] (-) TimerEvent: {}
+[21.784496] (-) TimerEvent: {}
+[21.885037] (-) TimerEvent: {}
+[21.985483] (-) TimerEvent: {}
+[22.085860] (-) TimerEvent: {}
+[22.191216] (-) TimerEvent: {}
+[22.292487] (-) TimerEvent: {}
+[22.393389] (-) TimerEvent: {}
+[22.497158] (-) TimerEvent: {}
+[22.601183] (-) TimerEvent: {}
+[22.703938] (-) TimerEvent: {}
+[22.809514] (-) TimerEvent: {}
+[22.910448] (-) TimerEvent: {}
+[23.012935] (-) TimerEvent: {}
+[23.114039] (-) TimerEvent: {}
+[23.222495] (-) TimerEvent: {}
+[23.333121] (-) TimerEvent: {}
+[23.434167] (-) TimerEvent: {}
+[23.536166] (-) TimerEvent: {}
+[23.639615] (-) TimerEvent: {}
+[23.741591] (-) TimerEvent: {}
+[23.843540] (-) TimerEvent: {}
+[23.945675] (-) TimerEvent: {}
+[24.047590] (-) TimerEvent: {}
+[24.149532] (-) TimerEvent: {}
+[24.251987] (-) TimerEvent: {}
+[24.354633] (-) TimerEvent: {}
+[24.456620] (-) TimerEvent: {}
+[24.559553] (-) TimerEvent: {}
+[24.661466] (-) TimerEvent: {}
+[24.765893] (-) TimerEvent: {}
+[24.872393] (-) TimerEvent: {}
+[24.975124] (-) TimerEvent: {}
+[25.078133] (-) TimerEvent: {}
+[25.178993] (-) TimerEvent: {}
+[25.280748] (-) TimerEvent: {}
+[25.382916] (-) TimerEvent: {}
+[25.484851] (-) TimerEvent: {}
+[25.586618] (-) TimerEvent: {}
+[25.689262] (-) TimerEvent: {}
+[25.790688] (-) TimerEvent: {}
+[25.899313] (-) TimerEvent: {}
+[25.989086] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KTestPublisher::TestPublisher()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[26.037491] (-) TimerEvent: {}
+[26.038278] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:17:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcapture of non-variable \xe2\x80\x98\x1b[01m\x1b[KTestPublisher::pub_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[26.038476] (topic_test) StderrLine: {'line': b'   17 |             500ms, [this, \x1b[01;31m\x1b[Kpub_\x1b[m\x1b[K]{pub_->publish("[this is a string of length 32]#");}\n'}
+[26.038647] (topic_test) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[26.038779] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:21:57:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > >::SharedPtr TestPublisher::pub_\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[26.038905] (topic_test) StderrLine: {'line': b'   21 |     rclcpp::Publisher<std_msgs::msg::String>::SharedPtr \x1b[01;36m\x1b[Kpub_\x1b[m\x1b[K;\n'}
+[26.039034] (topic_test) StderrLine: {'line': b'      |                                                         \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[26.039155] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[26.039284] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:17:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid user-defined conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char [33]\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::SerializedMessage&\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[26.039411] (topic_test) StderrLine: {'line': b'   17 |             500ms, [this, pub_]{pub_->publish(\x1b[01;31m\x1b[K"[this is a string of length 32]#"\x1b[m\x1b[K);}\n'}
+[26.039532] (topic_test) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[26.039698] (topic_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/subscription_base.hpp:36\x1b[m\x1b[K,\n'}
+[26.039820] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:26\x1b[m\x1b[K,\n'}
+[26.039940] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[26.040060] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[26.040180] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[26.040300] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[26.040420] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[26.040583] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[26.040715] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[26.040835] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[26.040954] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:5\x1b[m\x1b[K:\n'}
+[26.041073] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/serialized_message.hpp:50:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate is: \xe2\x80\x98\x1b[01m\x1b[Krclcpp::SerializedMessage::SerializedMessage(size_t, const rcl_allocator_t&)\x1b[m\x1b[K\xe2\x80\x99 <near match>\n'}
+[26.041194] (topic_test) StderrLine: {'line': b'   50 |   \x1b[01;36m\x1b[KSerializedMessage\x1b[m\x1b[K(\n'}
+[26.041314] (topic_test) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[26.041433] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/serialized_message.hpp:50:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  conversion of argument 1 would be ill-formed:\n'}
+[26.053434] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:17:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Ksize_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[26.053587] (topic_test) StderrLine: {'line': b'   17 |             500ms, [this, pub_]{pub_->publish(\x1b[01;31m\x1b[K"[this is a string of length 32]#"\x1b[m\x1b[K);}\n'}
+[26.053707] (topic_test) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[26.054345] (topic_test) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[26.054470] (topic_test) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[26.054586] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:17:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid conversion from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Ksize_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[26.054705] (topic_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/subscription_base.hpp:36\x1b[m\x1b[K,\n'}
+[26.054824] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:26\x1b[m\x1b[K,\n'}
+[26.054937] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[26.055056] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[26.055223] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[26.055408] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[26.055521] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[26.055633] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[26.055745] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[26.055857] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[26.055968] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:5\x1b[m\x1b[K:\n'}
+[26.056080] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/serialized_message.hpp:51:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Krclcpp::SerializedMessage::SerializedMessage(size_t, const rcl_allocator_t&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[26.056225] (topic_test) StderrLine: {'line': b'   51 |     \x1b[01;36m\x1b[Ksize_t initial_capacity\x1b[m\x1b[K,\n'}
+[26.056341] (topic_test) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K~~~~~~~^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[26.056452] (topic_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:31\x1b[m\x1b[K,\n'}
+[26.056565] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[26.056714] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[26.056831] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[26.056949] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[26.057060] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[26.069062] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[26.069230] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[26.069357] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[26.069481] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[26.069601] (topic_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:5\x1b[m\x1b[K:\n'}
+[26.069721] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/publisher.hpp:232:37:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(const rclcpp::SerializedMessage&) [with MessageT = std_msgs::msg::String_<std::allocator<void> >; AllocatorT = std::allocator<void>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[26.069952] (topic_test) StderrLine: {'line': b'  232 |   publish(\x1b[01;36m\x1b[Kconst SerializedMessage & serialized_msg\x1b[m\x1b[K)\n'}
+[26.070078] (topic_test) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[26.070197] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KTestPublisher::TestPublisher()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[26.070318] (topic_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ros2/ROS2-benchmark/topic-test/topic_test/src/publisher.cpp:16:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcreate_wall_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcreate_wall_timer\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[26.070439] (topic_test) StderrLine: {'line': b'   16 |         timer_ = \x1b[01;31m\x1b[Kcreate_wall_time\x1b[m\x1b[K(\n'}
+[26.070557] (topic_test) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[26.070676] (topic_test) StderrLine: {'line': b'      |                  \x1b[32m\x1b[Kcreate_wall_timer\x1b[m\x1b[K\n'}
+[26.138749] (-) TimerEvent: {}
+[26.240294] (-) TimerEvent: {}
+[26.341685] (-) TimerEvent: {}
+[26.444759] (-) TimerEvent: {}
+[26.547245] (-) TimerEvent: {}
+[26.648686] (-) TimerEvent: {}
+[26.750199] (-) TimerEvent: {}
+[26.851471] (-) TimerEvent: {}
+[26.954328] (-) TimerEvent: {}
+[27.057167] (-) TimerEvent: {}
+[27.159003] (-) TimerEvent: {}
+[27.260800] (-) TimerEvent: {}
+[27.364069] (-) TimerEvent: {}
+[27.465508] (-) TimerEvent: {}
+[27.565879] (-) TimerEvent: {}
+[27.666315] (-) TimerEvent: {}
+[27.766666] (-) TimerEvent: {}
+[27.867067] (-) TimerEvent: {}
+[27.967354] (-) TimerEvent: {}
+[28.068930] (-) TimerEvent: {}
+[28.170900] (-) TimerEvent: {}
+[28.276126] (-) TimerEvent: {}
+[28.376695] (-) TimerEvent: {}
+[28.406913] (topic_test) StderrLine: {'line': b'make[2]: *** [CMakeFiles/pub.dir/build.make:63: CMakeFiles/pub.dir/src/publisher.cpp.o] Error 1\n'}
+[28.439742] (topic_test) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/pub.dir/all] Error 2\n'}
+[28.439972] (topic_test) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[28.476811] (-) TimerEvent: {}
+[28.646212] (topic_test) CommandEnded: {'returncode': 2}
+[28.696011] (-) TimerEvent: {}
+[28.819627] (-) TimerEvent: {}
+[28.920358] (-) TimerEvent: {}
+[29.021377] (-) TimerEvent: {}
+[29.121749] (-) TimerEvent: {}
+[29.222057] (-) TimerEvent: {}
+[29.322526] (-) TimerEvent: {}
+[29.422853] (-) TimerEvent: {}
+[29.523217] (-) TimerEvent: {}
+[29.623533] (-) TimerEvent: {}
+[29.724000] (-) TimerEvent: {}
+[29.824601] (-) TimerEvent: {}
+[29.925050] (-) TimerEvent: {}
+[30.025439] (-) TimerEvent: {}
+[30.125870] (-) TimerEvent: {}
+[30.226424] (-) TimerEvent: {}
+[30.326936] (-) TimerEvent: {}
+[30.427216] (-) TimerEvent: {}
+[30.527759] (-) TimerEvent: {}
+[30.628249] (-) TimerEvent: {}
+[30.728918] (-) TimerEvent: {}
+[30.829364] (-) TimerEvent: {}
+[30.929855] (-) TimerEvent: {}
+[31.030220] (-) TimerEvent: {}
+[31.130618] (-) TimerEvent: {}
+[31.231180] (-) TimerEvent: {}
+[31.332162] (-) TimerEvent: {}
+[31.433105] (-) TimerEvent: {}
+[31.533497] (-) TimerEvent: {}
+[31.634121] (-) TimerEvent: {}
+[31.736266] (-) TimerEvent: {}
+[31.836801] (-) TimerEvent: {}
+[31.937303] (-) TimerEvent: {}
+[32.037998] (-) TimerEvent: {}
+[32.138462] (-) TimerEvent: {}
+[32.239020] (-) TimerEvent: {}
+[32.339576] (-) TimerEvent: {}
+[32.439966] (-) TimerEvent: {}
+[32.540355] (-) TimerEvent: {}
+[32.640696] (-) TimerEvent: {}
+[32.741447] (-) TimerEvent: {}
+[32.841509] (topic_test) JobEnded: {'identifier': 'topic_test', 'rc': 2}
+[32.843304] (-) TimerEvent: {}
+[32.847451] (-) EventReactorShutdown: {}
