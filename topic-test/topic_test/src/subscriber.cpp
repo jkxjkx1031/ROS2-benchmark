@@ -16,7 +16,7 @@ public:
     TestSubscriber(): Node("test_subscriber")
     {
         sub_ = create_subscription<std_msgs::msg::String>(
-            "topic", 10,
+            "topic", 50,
             std::bind(&TestSubscriber::topic_callback, this, std::placeholders::_1)
         );
     }
@@ -27,7 +27,7 @@ private:
         // RCLCPP_INFO(get_logger(), "Get: %s", msg->data.c_str());
         int n = std::stoi(msg->data);
         std::cout << n << " " <<
-            duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count() << "\n";
+            duration_cast<microseconds>(system_clock::now().time_since_epoch()).count() << "\n";
     }
 };
 

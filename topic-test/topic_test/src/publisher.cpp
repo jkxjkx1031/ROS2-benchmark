@@ -15,7 +15,7 @@ class TestPublisher : public rclcpp::Node
 public:
     TestPublisher(): Node("test_publisher")
     {
-        pub_ = create_publisher<std_msgs::msg::String>("topic", 10);
+        pub_ = create_publisher<std_msgs::msg::String>("topic", 50);
         timer_ = create_wall_timer(
             500ms, std::bind(&TestPublisher::timer_callback, this)
         );
@@ -31,7 +31,7 @@ private:
         msg.data = std::string(10 - msg.data.size(), ' ') + msg.data;   // align messages
         // RCLCPP_INFO(get_logger(), "Put: %s", msg.data.c_str());
         std::cout << counter_ << " " <<
-            duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count() << "\n";
+            duration_cast<microseconds>(system_clock::now().time_since_epoch()).count() << "\n";
         pub_->publish(msg);
     }
 };
