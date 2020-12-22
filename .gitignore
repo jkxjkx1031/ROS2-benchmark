@@ -1,2 +1,3 @@
 .vscode/
-topic-test/log/
+experiments/topic_test/log/
+experiments/service_test/log/
