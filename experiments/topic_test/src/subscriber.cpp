@@ -13,7 +13,7 @@ using namespace std::chrono;
 class TestSubscriber : public rclcpp::Node
 {
 public:
-    TestSubscriber(): Node("test_subscriber")
+    TestSubscriber(const char *node_name = "test_subscriber"): Node(node_name)
     {
         sub_ = create_subscription<std_msgs::msg::String>(
             "topic", 1,
@@ -34,7 +34,10 @@ private:
 int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<TestSubscriber>());
+    if (argc <= 1)
+        rclcpp::spin(std::make_shared<TestSubscriber>());
+    else
+        rclcpp::spin(std::make_shared<TestSubscriber>(argv[1]));
     rclcpp::shutdown();
     return 0;
 }
