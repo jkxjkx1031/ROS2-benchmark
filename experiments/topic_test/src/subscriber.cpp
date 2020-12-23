@@ -16,7 +16,7 @@ public:
     TestSubscriber(): Node("test_subscriber")
     {
         sub_ = create_subscription<std_msgs::msg::String>(
-            "topic", 50,
+            "topic", 1,
             std::bind(&TestSubscriber::topic_callback, this, std::placeholders::_1)
         );
     }

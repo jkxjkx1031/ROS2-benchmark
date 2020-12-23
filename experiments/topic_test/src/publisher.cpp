@@ -15,7 +15,7 @@ class TestPublisher : public rclcpp::Node
 public:
     TestPublisher(): Node("test_publisher")
     {
-        pub_ = create_publisher<std_msgs::msg::String>("topic", 50);
+        pub_ = create_publisher<std_msgs::msg::String>("topic", 1);
         timer_ = create_wall_timer(
             500ms, std::bind(&TestPublisher::timer_callback, this)
         );
