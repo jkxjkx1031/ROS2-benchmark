@@ -1,8 +1,10 @@
 #include <chrono>
-#include <string>
-#include <memory>
 #include <functional>
+#include <future>
 #include <iostream>
+#include <memory>
+#include <string>
+#include <thread>
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
@@ -36,10 +38,21 @@ private:
     }
 };
 
+void run_publisher(int duration)
+{
+    std::promise<void> p;
+    rclcpp::spin_until_future_complete(
+        std::make_shared<TestPublisher>(),
+        std::shared_future<void>(p.get_future()),
+        seconds(duration)
+    );
+}
+
 int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<TestPublisher>());
+    std::thread publisherRunner(run_publisher, 10);
+    publisherRunner.join();
     rclcpp::shutdown();
     return 0;
 }
