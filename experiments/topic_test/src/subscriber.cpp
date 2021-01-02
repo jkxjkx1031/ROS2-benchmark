@@ -37,9 +37,9 @@ private:
     void topic_callback(const std_msgs::msg::String::SharedPtr msg) const
     {
         // RCLCPP_INFO(get_logger(), "Get: %s", msg->data.c_str());
-        int n = std::stoi(msg->data);
-        std::cout << n << " " <<
-            duration_cast<microseconds>(system_clock::now().time_since_epoch()).count() << "\n";
+        // int n = std::stoi(msg->data);
+        // std::cout << n << " " <<
+        //     duration_cast<microseconds>(system_clock::now().time_since_epoch()).count() << "\n";
         Stats::message_count++;
     }
 };
@@ -57,17 +57,23 @@ void run_subscriber(const char *node_name, int duration)
 int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
-    int n = 4;
-    std::vector<std::thread> SubscriberRunners(n);
-    for (int i = 0; i < n; i++)
-        SubscriberRunners[i] = std::thread(
-            run_subscriber,
-            (std::string("sub_") + std::to_string(i)).c_str(),
-            10
-        );
-    for (int i = 0; i < n; i++)
-        SubscriberRunners[i].join();
+    const int DURATION = 60;
+    const int MAX_NODE_COUNT = 16;
+    std::vector<std::thread> SubscriberRunners(MAX_NODE_COUNT);
+    for (int n = 1; n <= MAX_NODE_COUNT; n++)
+    {
+        Stats::message_count = 0;
+        for (int i = 0; i < n; i++)
+            SubscriberRunners[i] = std::thread(
+                run_subscriber,
+                (std::string("sub_") + std::to_string(i)).c_str(),
+                DURATION
+            );
+        for (int i = 0; i < n; i++)
+            SubscriberRunners[i].join();
+        std::cout << Stats::message_count << "\n";
+        std::cerr << "n=" << n << " completed.\n";
+    }
     rclcpp::shutdown();
-    std::cout << "Throughput: " << Stats::message_count << "\n";
     return 0;
 }

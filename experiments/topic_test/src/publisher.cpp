@@ -19,7 +19,7 @@ public:
     {
         pub_ = create_publisher<std_msgs::msg::String>("topic", 1);
         timer_ = create_wall_timer(
-            500ms, std::bind(&TestPublisher::timer_callback, this)
+            1ms, std::bind(&TestPublisher::timer_callback, this)
         );
     }
 private:
@@ -32,8 +32,8 @@ private:
         msg.data = std::to_string(++counter_);
         msg.data = std::string(10 - msg.data.size(), ' ') + msg.data;   // align messages
         // RCLCPP_INFO(get_logger(), "Put: %s", msg.data.c_str());
-        std::cout << counter_ << " " <<
-            duration_cast<microseconds>(system_clock::now().time_since_epoch()).count() << "\n";
+        // std::cout << counter_ << " " <<
+        //     duration_cast<microseconds>(system_clock::now().time_since_epoch()).count() << "\n";
         pub_->publish(msg);
     }
 };
@@ -51,7 +51,7 @@ void run_publisher(int duration)
 int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
-    std::thread publisherRunner(run_publisher, 10);
+    std::thread publisherRunner(run_publisher, 2000);
     publisherRunner.join();
     rclcpp::shutdown();
     return 0;
