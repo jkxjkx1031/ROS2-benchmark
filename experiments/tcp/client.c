@@ -8,32 +8,42 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-int main()
-{
-    int sockfd, connfd;
-    struct sockaddr_in srv;
+const int PORT0 = 10080;
+const int N_SAMPLE = 8000;
+const int MAX_MSG_LEN = 20;
 
-    sockfd = socket(AF_INET, SOCK_STREAM, 0);
-    bzero(&srv, sizeof(srv));
-    srv.sin_family = AF_INET;
-    srv.sin_addr.s_addr = inet_addr("127.0.0.1");
-    srv.sin_port = htons(8080);
+int main(int argc, char **argv)
+{
+    int n_srv, sockfd[100];
+    struct sockaddr_in srv[100];
+
+    n_srv = atoi(argv[1]);
+    bzero(srv, sizeof(srv));
+    for (int i = 0; i < n_srv; i++)
+    {
+        srv[i].sin_family = AF_INET;
+        srv[i].sin_addr.s_addr = inet_addr("127.0.0.1");
+        srv[i].sin_port = htons(PORT0 + i);
+        sockfd[i] = socket(AF_INET, SOCK_STREAM, 0);
+        connect(sockfd[i], (struct sockaddr*)&srv[i], sizeof(srv[i]));
+    }
 
     char buf[100];
     struct timeval tv;
     long long now;
 
-    connect(sockfd, (struct sockaddr*)&srv, sizeof(srv));
-    for (int i = 1; i <= 2000; i++)
+    for (int i = 1; i <= N_SAMPLE; i++)
     {
-        bzero(buf, 20);
+        bzero(buf, MAX_MSG_LEN);
         gettimeofday(&tv, NULL);
         now = tv.tv_sec * 1000000 + tv.tv_usec;
         sprintf(buf, "%lld", now);
-        write(sockfd, buf, 20);
-        fprintf(stderr, "ready to print: %s\n", buf);
+        for (int j = 0; j < n_srv; j++)
+            write(sockfd[j], buf, MAX_MSG_LEN);
+        // fprintf(stderr, "ready to print: %s\n", buf);
     }
-    close(sockfd);
+    for (int i = 0; i < n_srv; i++)
+        close(sockfd[i]);
 
     return 0;
 }
