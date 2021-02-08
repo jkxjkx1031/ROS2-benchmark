@@ -1,0 +1,5 @@
+struct SimpleTopic
+{
+    unsigned long index;
+    string message;
+};
