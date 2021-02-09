@@ -8,6 +8,7 @@
 #include <fastdds/dds/publisher/DataWriterListener.hpp>
 
 using namespace eprosima::fastdds::dds;
+using namespace std::chrono;
 
 class SimplePublisher
 {
@@ -45,16 +46,16 @@ private:
             if (info.current_count_change == 1)
             {
                 matched_ = info.total_count;
-                std::cout << "Publisher matched." << std::endl;
+                std::cerr << "Publisher matched." << std::endl;
             }
             else if (info.current_count_change == -1)
             {
                 matched_ = info.total_count;
-                std::cout << "Publisher unmatched." << std::endl;
+                std::cerr << "Publisher unmatched." << std::endl;
             }
             else
             {
-                std::cout << info.current_count_change
+                std::cerr << info.current_count_change
                         << " is not a valid value for PublicationMatchedStatus current count change." << std::endl;
             }
         }
@@ -141,6 +142,7 @@ public:
         if (listener_.matched_ > 0)
         {
             content_.index(content_.index() + 1);
+            content_.message(std::to_string(duration_cast<microseconds>(system_clock::now().time_since_epoch()).count()));
             writer_->write(&content_);
             return true;
         }
@@ -148,19 +150,19 @@ public:
     }
 
     //!Run the Publisher
-    void run(
-            uint32_t samples)
+    void run(int nodes, int samples, int interval)
     {
-        uint32_t samples_sent = 0;
+        while (listener_.matched_ < nodes) /* wait */;
+        int samples_sent = 0;
         while (samples_sent < samples)
         {
             if (publish())
             {
                 samples_sent++;
-                std::cout << "Message: " << content_.message() << " with index: " << content_.index()
-                            << " SENT" << std::endl;
+                // std::cout << "Message: " << content_.message() << " with index: " << content_.index()
+                //             << " SENT" << std::endl;
             }
-            std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+            std::this_thread::sleep_for(std::chrono::milliseconds(interval));
         }
     }
 };
@@ -169,13 +171,18 @@ int main(
         int argc,
         char** argv)
 {
-    std::cout << "Starting publisher." << std::endl;
-    int samples = 10;
+    // std::cerr << "Starting publisher." << std::endl;
+    
+    if (argc < 4)
+        std::cerr << "Usage: pub <Npublishers/Nsubscribers> <Nsamples> <sendInterval>\n";
+    int nodes = std::stoi(argv[1]);
+    int samples = std::stoi(argv[2]);
+    int interval = std::stoi(argv[3]);
 
     SimplePublisher* pub = new SimplePublisher();
     if(pub->init())
     {
-        pub->run(static_cast<uint32_t>(samples));
+        pub->run(nodes, samples, interval);
     }
 
     delete pub;

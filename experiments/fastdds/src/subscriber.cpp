@@ -9,7 +9,10 @@
 #include <fastdds/dds/subscriber/qos/DataReaderQos.hpp>
 #include <fastdds/dds/subscriber/SampleInfo.hpp>
 
+#include <thread>
+
 using namespace eprosima::fastdds::dds;
+using namespace std::chrono;
 
 class SimpleSubscriber
 {
@@ -30,7 +33,7 @@ private:
     public:
 
         SubListener()
-            : samples_(0)
+            : latency(0), samples(0)
         {
         }
 
@@ -44,15 +47,15 @@ private:
         {
             if (info.current_count_change == 1)
             {
-                std::cout << "Subscriber matched." << std::endl;
+                std::cerr << "Subscriber matched." << std::endl;
             }
             else if (info.current_count_change == -1)
             {
-                std::cout << "Subscriber unmatched." << std::endl;
+                std::cerr << "Subscriber unmatched." << std::endl;
             }
             else
             {
-                std::cout << info.current_count_change
+                std::cerr << info.current_count_change
                         << " is not a valid value for SubscriptionMatchedStatus current count change" << std::endl;
             }
         }
@@ -65,16 +68,20 @@ private:
             {
                 if (info.valid_data)
                 {
-                    samples_++;
-                    std::cout << "Message: " << content_.message() << " with index: " << content_.index()
-                                << " RECEIVED." << std::endl;
+                    long long trecv = duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
+                    long long tsend = std::stoll(content_.message());
+                    long long elapsed = trecv - tsend;
+                    latency += (elapsed - latency) / ++samples;
+                    // std::cerr << "Message: " << content_.message() << " with index: " << content_.index()
+                    //             << " RECEIVED." << std::endl;
                 }
             }
         }
 
         SimpleTopic content_;
 
-        std::atomic_int samples_;
+        double latency;
+        int samples;
 
     } listener_;
 
@@ -149,29 +156,53 @@ public:
     }
 
     //!Run the Subscriber
-    void run(
-        uint32_t samples)
+    void run(int duration)
     {
-        while(listener_.samples_ < samples)
-        {
-            std::this_thread::sleep_for(std::chrono::milliseconds(100));
-        }
+        std::this_thread::sleep_for(std::chrono::seconds(duration));
+    }
+
+    double getLatency()
+    {
+        return listener_.latency;
     }
 };
+
+double latencies[20];
+
+void run_subscriber(int tid, int duration)
+{
+    // std::cerr << "Starting subscriber." << std::endl;
+
+    SimpleSubscriber* sub = new SimpleSubscriber();
+    if(sub->init())
+    {
+        sub->run(duration);
+    }
+    latencies[tid] = sub->getLatency();
+
+    delete sub;
+}
 
 int main(
         int argc,
         char** argv)
 {
-    std::cout << "Starting subscriber." << std::endl;
-    int samples = 10;
+    if (argc < 3)
+        std::cerr << "Usage: sub <Npublishers/Nsubscribers> <duration>\n";
+    int nodes = std::stoi(argv[1]);
+    int seconds = std::stoi(argv[2]);
 
-    SimpleSubscriber* sub = new SimpleSubscriber();
-    if(sub->init())
-    {
-        sub->run(static_cast<uint32_t>(samples));
-    }
+    std::thread th[10];
+    for (int i = 0; i < nodes; i++)
+        th[i] = std::thread(run_subscriber, i, seconds);
+    for (int i = 0; i < nodes; i++)
+        th[i].join();
 
-    delete sub;
+    double result = 0;
+    for (int i = 0; i < nodes; i++)
+        result += latencies[i];
+    result /= nodes;
+    std::cout << result << "\n";
+
     return 0;
 }
