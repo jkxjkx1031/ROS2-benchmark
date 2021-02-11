@@ -1,4 +1,4 @@
 .vscode/
-experiments/topic_test/log/
-experiments/service_test/log/
-experiments/fastdds/build/
+**/log/
+**/build/
+**/install/
