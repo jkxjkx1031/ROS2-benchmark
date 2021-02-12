@@ -9,15 +9,17 @@
 #include <unistd.h>
 
 const int PORT0 = 10080;
-const int N_SAMPLE = 8000;
+const int N_SAMPLE = 1000;
 const int MAX_MSG_LEN = 20;
 
 int main(int argc, char **argv)
 {
-    int n_srv, sockfd[100];
+    int n_srv, sockfd[100], freq;
     struct sockaddr_in srv[100];
 
     n_srv = atoi(argv[1]);
+    freq = atoi(argv[2]);
+
     bzero(srv, sizeof(srv));
     for (int i = 0; i < n_srv; i++)
     {
@@ -41,6 +43,7 @@ int main(int argc, char **argv)
         for (int j = 0; j < n_srv; j++)
             write(sockfd[j], buf, MAX_MSG_LEN);
         // fprintf(stderr, "ready to print: %s\n", buf);
+        usleep(1000000 / freq);
     }
     for (int i = 0; i < n_srv; i++)
         close(sockfd[i]);

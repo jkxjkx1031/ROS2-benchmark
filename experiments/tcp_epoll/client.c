@@ -10,7 +10,7 @@
 #include <unistd.h>
 
 const int PORT0 = 10080;
-const int N_SAMPLE = 8000;
+const int N_SAMPLE = 1000;
 const int MAX_MSG_LEN = 20;
 double avg_rtt[100];
 
@@ -37,6 +37,7 @@ void *run_client(void *thread_id)
         read(sockfd, recvmsg, MAX_MSG_LEN);
         gettimeofday(&tv_end, NULL);
         avg_rtt[(long long)thread_id] += tv_end.tv_sec * 1000000 + tv_end.tv_usec - tv_start.tv_sec * 1000000 - tv_start.tv_usec;
+        usleep(20000);
     }
     close(sockfd);
     avg_rtt[(long long)thread_id] /= N_SAMPLE;

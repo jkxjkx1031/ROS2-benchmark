@@ -9,7 +9,7 @@
 #include <unistd.h>
 
 const int PORT0 = 10080;
-const int N_SAMPLE = 8000;
+const int N_SAMPLE = 1000;
 const int MAX_MSG_LEN = 20;
 long long latency[10000][100];
 
@@ -61,21 +61,26 @@ int main(int argc, char **argv)
     for (long long i = 0; i < n_srv; i++)
         pthread_join(thread[i], NULL);
 
-    double avg_min = 0, avg_max = 0;
+    // double avg_min = 0, avg_max = 0;
+    double result = 0;
     for (int i = 1; i <= N_SAMPLE; i++)
     {
-        long long min = 0x3f3f3f3f3f3f3f3f, max = 0;
+        // long long min = 0x3f3f3f3f3f3f3f3f, max = 0;
+        // for (int j = 0; j < n_srv; j++)
+        // {
+        //     if (latency[i][j] < min)
+        //         min = latency[i][j];
+        //     if (latency[i][j] > max)
+        //         max = latency[i][j];
+        // }
+        // avg_min += (min - avg_min) / i;
+        // avg_max += (max - avg_max) / i;
         for (int j = 0; j < n_srv; j++)
-        {
-            if (latency[i][j] < min)
-                min = latency[i][j];
-            if (latency[i][j] > max)
-                max = latency[i][j];
-        }
-        avg_min += (min - avg_min) / i;
-        avg_max += (max - avg_max) / i;
+            result += latency[i][j];
     }
-    fprintf(stdout, "%.6f\n%.6f\n", avg_min, avg_max);
+    // fprintf(stdout, "%.6f\n%.6f\n", avg_min, avg_max);
+    result /= N_SAMPLE * n_srv;
+    fprintf(stdout, "%.6f\n", result);
 
     return 0;
 }
