@@ -1,3 +1,5 @@
+#define _GNU_SOURCE
+
 #include <netinet/in.h>
 #include <pthread.h>
 #include <stdio.h>
@@ -13,21 +15,28 @@ const int N_SAMPLE = 1000;
 const int MAX_MSG_LEN = 20;
 long long latency[10000][100];
 
-void *run_server(void *port)
+void *run_server(void *thread_id)
 {
+    int port = (long long)thread_id + PORT0;
     int sockfd, connfd;
     struct sockaddr_in addr, cli;
+    cpu_set_t cpuset;
+    pthread_t thread = pthread_self();
+
+    CPU_ZERO(&cpuset);
+    CPU_SET((long long)thread_id % 8, &cpuset);
+    pthread_setaffinity_np(thread, sizeof(cpuset), &cpuset);
 
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &(int){1}, sizeof(int));
     bzero(&addr, sizeof(addr));
     addr.sin_family = AF_INET;
     addr.sin_addr.s_addr = htonl(INADDR_ANY);
-    addr.sin_port = htons((long long)port);
+    addr.sin_port = htons(port);
     bind(sockfd, (struct sockaddr*)&addr, sizeof(addr));
     listen(sockfd, 5);
 
-    fprintf(stderr, "port %lld - waiting for client message...\n", (long long)port);
+    fprintf(stderr, "port %d - waiting for client message...\n", port);
 
     int n, len;
     char buf[100], *ep;
@@ -42,7 +51,7 @@ void *run_server(void *port)
         send = strtoll(buf, &ep, 10);
         gettimeofday(&tv, NULL);
         now = tv.tv_sec * 1000000 + tv.tv_usec;
-        latency[i][(long long)port - PORT0] = now - send;
+        latency[i][port - PORT0] = now - send;
         // fprintf(stdout, "%lld\n", now - send);
     }
     close(sockfd);
@@ -57,8 +66,8 @@ int main(int argc, char **argv)
 
     n_srv = atoi(argv[1]);
     for (long long i = 0; i < n_srv; i++)
-        pthread_create(&thread[i], NULL, run_server, (void*)(i + PORT0));
-    for (long long i = 0; i < n_srv; i++)
+        pthread_create(&thread[i], NULL, run_server, (void*)i);
+    for (int i = 0; i < n_srv; i++)
         pthread_join(thread[i], NULL);
 
     // double avg_min = 0, avg_max = 0;
