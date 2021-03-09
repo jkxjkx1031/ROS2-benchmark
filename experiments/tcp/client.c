@@ -11,6 +11,7 @@
 const int PORT0 = 10080;
 const int N_SAMPLE = 1000;
 const int MAX_MSG_LEN = 20;
+long long write_latency[10000];
 
 int main(int argc, char **argv)
 {
@@ -32,21 +33,29 @@ int main(int argc, char **argv)
 
     char buf[100];
     struct timeval tv;
-    long long now;
+    long long now, send;
 
     for (int i = 1; i <= N_SAMPLE; i++)
     {
         bzero(buf, MAX_MSG_LEN);
         gettimeofday(&tv, NULL);
-        now = tv.tv_sec * 1000000 + tv.tv_usec;
-        sprintf(buf, "%lld", now);
+        send = tv.tv_sec * 1000000 + tv.tv_usec;
+        sprintf(buf, "%lld", send);
         for (int j = 0; j < n_srv; j++)
+        {
             write(sockfd[j], buf, MAX_MSG_LEN);
+            gettimeofday(&tv, NULL);
+            now = tv.tv_sec * 1000000 + tv.tv_usec;
+            write_latency[i] = now - send;
+        }
         // fprintf(stderr, "ready to print: %s\n", buf);
         usleep(1000000 / freq);
     }
     for (int i = 0; i < n_srv; i++)
         close(sockfd[i]);
+
+    for (int i = 0; i < N_SAMPLE; i++)
+        printf("%lld\n", write_latency[i]);
 
     return 0;
 }
