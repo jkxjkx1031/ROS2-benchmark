@@ -35,18 +35,18 @@ int main(int argc, char **argv)
     struct timeval tv;
     long long now, send;
 
-    for (int i = 1; i <= N_SAMPLE; i++)
+    for (int i = 0; i < N_SAMPLE; i++)
     {
         bzero(buf, MAX_MSG_LEN);
         gettimeofday(&tv, NULL);
         send = tv.tv_sec * 1000000 + tv.tv_usec;
         sprintf(buf, "%lld", send);
-        for (int j = 0; j < n_srv; j++)
+        for (int j = 0; j < 10; j++)
         {
-            write(sockfd[j], buf, MAX_MSG_LEN);
+            write(sockfd[0], buf, MAX_MSG_LEN);
             gettimeofday(&tv, NULL);
             now = tv.tv_sec * 1000000 + tv.tv_usec;
-            write_latency[i] = now - send;
+            write_latency[i] += now - send;
         }
         // fprintf(stderr, "ready to print: %s\n", buf);
         usleep(1000000 / freq);
