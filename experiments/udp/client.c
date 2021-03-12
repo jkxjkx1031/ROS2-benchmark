@@ -9,21 +9,20 @@
 #include <unistd.h>
 
 const int PORT0 = 10080;
-const int N_SAMPLE = 1000;
+const int N_SAMPLE = 10000;
 const int MAX_MSG_LEN = 20;
 const char *GROUP_ADDR = "239.0.0.1";
 long long write_latency[10000];
 
 int main(int argc, char **argv)
 {
-    int n_srv, freq, sockfd, len;
+    int freq, sockfd, len;
     struct sockaddr_in addr;
     char buf[100];
     struct timeval tv;
     long long now, send;
 
-    n_srv = atoi(argv[1]);
-    freq = atoi(argv[2]);
+    freq = atoi(argv[1]);
 
     sockfd = socket(AF_INET, SOCK_DGRAM, 0);
     bzero(&addr, sizeof(addr));
@@ -40,6 +39,9 @@ int main(int argc, char **argv)
         sprintf(buf, "%lld", send);
         sendto(sockfd, buf, MAX_MSG_LEN, 0, (struct sockaddr*)&addr, len);
         // fprintf(stderr, "ready to print: %s\n", buf);
+        gettimeofday(&tv, NULL);
+        now = tv.tv_sec * 1000000 + tv.tv_usec;
+        write_latency[i] += now - send;
         usleep(1000000 / freq);
     }
 

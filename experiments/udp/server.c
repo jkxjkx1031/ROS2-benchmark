@@ -51,7 +51,7 @@ void *run_server(void *thread_id)
     for (int i = 1; i <= N_SAMPLE; i++)
     {
         recvfrom(sockfd, buf, MAX_MSG_LEN, 0, (struct sockaddr*)&addr, &len);
-        fprintf(stderr, "port %d receive: %s\n", port, buf);
+        // fprintf(stderr, "port %d receive: %s\n", port, buf);
         send = strtoll(buf, &ep, 10);
         gettimeofday(&tv, NULL);
         now = tv.tv_sec * 1000000 + tv.tv_usec;
