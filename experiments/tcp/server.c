@@ -11,7 +11,7 @@
 #include <unistd.h>
 
 const int PORT0 = 10080;
-const int N_SAMPLE = 10000;
+const int N_SAMPLE = 1000;
 const int MAX_MSG_LEN = 20;
 long long latency[10000][100];
 
