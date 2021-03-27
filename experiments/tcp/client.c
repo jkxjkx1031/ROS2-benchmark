@@ -41,9 +41,9 @@ int main(int argc, char **argv)
         gettimeofday(&tv, NULL);
         send = tv.tv_sec * 1000000 + tv.tv_usec;
         sprintf(buf, "%lld", send);
-        for (int j = 0; j < 10; j++)
+        for (int j = 0; j < n_srv; j++)
         {
-            write(sockfd[0], buf, MAX_MSG_LEN);
+            write(sockfd[j], buf, MAX_MSG_LEN);
             gettimeofday(&tv, NULL);
             now = tv.tv_sec * 1000000 + tv.tv_usec;
             write_latency[i] += now - send;
